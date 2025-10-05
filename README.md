@@ -64,5 +64,4 @@ Made with 💥 by **Grovesyy's Assets**
 ---
 
 ## 📜 License
-
-Use it how you want. Happ
+open
