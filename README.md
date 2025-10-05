@@ -1,70 +1,68 @@
-# \# Grovesyy's Assets - New Year Firework Display
+# 🎆 Grovesyy's Assets - New Year Firework Display
 
-# 
+A simple and effective New Year firework display script for QBCore servers.
 
-# A simple and effective New Year firework display script for QBCore servers.
+---
 
-# 
+## 🌟 Features
 
-# \## Features
+* **Automatic Fireworks** every **January 1st at 00:00**
+* **Stops Automatically** at **00:15**
+* **Manual Trigger** via `/fireworkshow` command
+* **Multiple Firework Types**: `Battery`, `Rocket`, `Fountain`
+* **Customizable Locations** via `config.lua`
 
-# 
+---
 
-# \* \*\*Automatic Fireworks\*\* every January 1st at 00:00
+## 📁 Installation
 
-# \* \*\*Stops Automatically\*\* at 00:15
+```bash
+# 1. Place in your resources folder
+cd resources
 
-# \* \*\*Manual Trigger\*\* via `/fireworkshow` command
+# 2. Add to your server.cfg
+ensure firework
+```
 
-# \* \*\*Multiple Firework Types\*\*: Battery, Rocket, Fountain
+---
 
-# \* \*\*Customizable Locations\*\* via `config.lua`
+## 🛠️ Configuration
 
-# 
+Edit `config.lua` to change firework positions and types.
 
-# \## Installation
+```lua
+Config.FireworkLocations = {
+    vector4(-1934.69, -1333.48, 20.74, "Battery"),
+    vector4(-1800.69, -1333.48, 20.74, "Rocket"),
+    -- Add more as needed
+}
+```
 
-# 
+---
 
-# 1\. \*\*Drag and drop\*\* the resource into your `resources` folder.
+## 💻 File Structure
 
-# 2\. Add `ensure firework` to your `server.cfg`.
+* `server.lua` - Time checks and server-side logic
+* `client.lua` - Firework visual effects
+* `config.lua` - Location and type setup
+* `fxmanifest.lua` - Resource manifest
 
-# 3\. Edit `config.lua` to adjust firework locations or types if needed.
+---
 
-# 
+## 🚀 Usage
 
-# \## File Structure
+* **Auto-launches** at **00:00 on Jan 1st**
+* **Stops** at **00:15 on Jan 1st**
+* Use `/fireworkshow` to manually trigger the show
 
-# 
+---
 
-# \* `server.lua` - Handles timing and server-side triggers
+## 🙏 Credits
 
-# \* `client.lua` - Spawns fireworks and effects
+Made with 💥 by **Grovesyy's Assets**
 
-# \* `config.lua` - Configure firework positions and types
+---
 
-# \* `fxmanifest.lua` - Resource manifest
+## 📜 License
 
-# 
-
-# \## Usage
-
-# 
-
-# \* Fireworks launch automatically at New Year (January 1st @ 00:00)
-
-# \* Use `/fireworkshow` to manually test or trigger the display
-
-# 
-
-# \## Credits
-
-# 
-
-# Developed by \*\*Grovesyy's Assets\*\*
-
-# 
-
-# Enjoy the show and Happy New Year!
-
+Use it how you want. Happ
