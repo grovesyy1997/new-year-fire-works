@@ -8,19 +8,33 @@ local function GetTime()
 end
 
 CreateThread(function()
+    local countdownStarted = false
+
     while true do
-        Wait(60000) -- Check every minute
+        Wait(1000) -- Check every second
         local time = GetTime()
-        -- Only run on January 1st at 00:00
         local date = os.date("*t")
-        if date.day == 1 and date.month == 1 and time.h == 0 and time.m == 0 then
-            FireworkShow()
+        local second = tonumber(os.date("%S"))
+
+        -- Start countdown at 23:59:50 on Dec 31
+        if date.day == 31 and date.month == 12 and time.h == 23 and time.m == 59 and second == 50 and not countdownStarted then
+            countdownStarted = true
+            CreateThread(function()
+                for i = 10, 1, -1 do
+                    TriggerClientEvent('chat:addMessage', -1, {
+                        args = { "^2[New Year Countdown]^0 " .. i }
+                    })
+                    Wait(1000)
+                end
+                FireworkShow()
+            end)
         elseif date.day == 1 and date.month == 1 and time.h == 0 and time.m == 15 then
             print("^1Fireworkshow is over.^0")
             TriggerClientEvent("firework:stopFireworkShow", -1)
         end
     end
 end)
+
 
 
 local function FireworkShow()
