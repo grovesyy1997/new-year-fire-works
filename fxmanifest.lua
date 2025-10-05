@@ -1,7 +1,7 @@
 fx_version "cerulean"
 games { "gta5" }
 
-author "Canis Lupus"
+author "Grovesyy"
 description "Firework Event"
 
 client_scripts {
